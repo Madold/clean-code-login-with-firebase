@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginScreenFragment">
+
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.markusw.loginwithfirebase.ui.view.fragments.LoginScreenFragment"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_registerScreenFragment"
+            app:destination="@id/registerScreenFragment"
+            app:popUpTo="@id/loginScreenFragment" />
+        <action
+            android:id="@+id/action_loginScreenFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerScreenFragment"
+        android:name="com.markusw.loginwithfirebase.ui.view.fragments.RegisterScreenFragment"
+        android:label="fragment_register_screen"
+        tools:layout="@layout/fragment_register_screen" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.markusw.loginwithfirebase.ui.view.fragments.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>
